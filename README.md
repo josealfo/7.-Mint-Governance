@@ -1,6 +1,6 @@
-# Sample Hardhat Project
+# Mint Governance
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+Simple governance scripts and contracts, tested in hardhat, and later deployed to goerli. Solidity's smart contract was taken from an OpenZeppelin wizard, and configured for longer voting delay and voting periods, longer than those used in the local environment. This project was made for learning purposes, not for production.
 
 Try running some of the following tasks:
 

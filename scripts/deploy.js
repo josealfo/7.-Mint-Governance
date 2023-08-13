@@ -1,6 +1,7 @@
 const { ethers } = require("hardhat");
 
 async function main() {
+  const [owner] = await ethers.getSigners();
   const transactionCount = await owner.getTransactionCount();
 
   // gets the address of the token before it is deployed
@@ -19,6 +20,11 @@ async function main() {
     `Governor deployed to ${governor.address}`,
     `Token deployed to ${token.address}`
   );
+  /*  Script deployed both contracts sucessfully
+    > npx hardhat run scripts/deploy.js --network goerli
+Governor deployed to 0xB26EBf91c820648dC08f8a62C395FfBe3CD70824 
+Token deployed to 0x58bEae0AbBAc2b921728f63126d1C4D0e9D2dabd
+*/
 }
 
 main().catch((error) => {
