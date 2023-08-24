@@ -20,6 +20,8 @@ async function main() {
   console.log("Voted successfully... voting ends in one week");
   /* This script provided the following output:
 
+Voted successfully... voting ends in one week
+
 */
 }
 

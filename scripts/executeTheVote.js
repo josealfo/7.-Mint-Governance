@@ -18,19 +18,15 @@ async function main() {
   let myGovernorContract = new ethers.Contract(myGovernorAddress, myGovernorArtifacts.abi, wallet);
   let myTokenContract = new ethers.Contract(myTokenAddress, myTokenArtifacts.abi, wallet);
 
-  //const tx = await myGovernorContract.execute(proposalId);
-     
   const tx = await myGovernorContract.execute(
     [myTokenAddress],
     [0],
     [myTokenContract.interface.encodeFunctionData("mint", [myAddress, ethers.utils.parseEther("25000")])],
-    "Give the owner more tokens!"
+    ethers.utils.formatBytes32String("moretokens")
   );
   
   console.log("Executed the proposal successfully... upon minting you will receive the tokens");
-  /* This script provided the following output:
-
-*/
+  /* This script provided the following output:*/
 }
 
 main().catch((error) => {
